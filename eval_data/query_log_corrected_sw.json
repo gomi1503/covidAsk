@@ -1,0 +1,149 @@
+{
+    "data": [
+        {
+            "id": "corona_query_0",
+            "question": "COVID-19 vaccines",
+            "answers": [
+                "Remdesivir",
+                "hydroxychloroquine and lopinavir"
+            ]
+        },
+        {
+            "id": "corona_query_1",
+            "question": "medical treatment for covid",
+            "answers": [
+                "antimicrobial treatment",
+                "Developing a deep learning-based model for automatic COVID-19 detection on chest CT",
+                "nelfinavir is a potential candidate drug for the treatment of COVID-19",
+                "a good medical service can effectively reduce the mortality rate of the viral infection to 1% or less.",
+                "Convalescent plasma appears safe but may not reduce mortality in severe influenza",
+                "pulmonary rehabilitation",
+                "Fast testing",
+                "Salvage corticosteroids",
+                "After comprehensive treatment including reduce and stop immunosuppressive therapy",
+                "The document provides clinical recommendations for the noninvasive respiratory support",
+                "The restoration of leukomonocytes counts from peripheral blood",
+                "advanced life support treatment",
+                "surgical treatment",
+                "strict disinfection, body temperature monitoring",
+                "Nutritional support"
+            ]
+        },
+        {
+            "id": "corona_query_2",
+            "question": "Symptoms covid 19",
+            "answers": [
+                "Mainly initial symptoms were cough and low fever",
+                "Most patients with confirmed or suspected COVID 19 presented with fever and dry cough",
+                "A 46-year-old woman presented to the emergency department with 2-day fever and cough",
+                "lung injury with complications in other organs",
+                "fever and dry cough",
+                "anosmia and ageusia",
+                "conjunctivitis",
+                "fever (five patients, 100%), cough",
+                "pneumonia",
+                "fatigue, discomfort, and helplessness",
+                "cough",
+                "fever, cough, and myalgia"
+            ]
+        },
+        {
+            "id": "corona_query_3",
+            "question": "coronavirus transmission surfaces",
+            "answers": [
+                "extensive human\u2010to\u2010human transmission is evident, with clusters of infected families and medical staff",
+                "Person-to-person transmission is evident in outbreaks involving household and hospital contacts",
+                "metal, glass or plastic"
+            ]
+        },
+        {
+            "id": "corona_query_4",
+            "question": "covid-19 origin",
+            "answers": [
+                "Malayan Pangolins",
+                "Pangolin-CoV",
+                "bats",
+                "zoonotic origin",
+                "bat-origin coronaviruses"
+            ]
+        },
+        {
+            "id": "corona_query_5",
+            "question": "cytokine storms in COVID-19",
+            "answers": [
+                "mild or severe cytokine storms",
+                "cytokine storms"
+            ]
+        },
+        {
+            "id": "corona_query_6",
+            "question": "Similarity between sars and covid",
+            "answers": [
+                "striking similarities",
+                "many similarities",
+                "high similarity",
+                "High structural similarity"
+            ]
+        },
+        {
+            "id": "corona_query_7",
+            "question": "Effective ways of clinical trials",
+            "answers": [
+                "Abstract Pharmacophore-based virtual screening",
+                "Drug repurposing",
+                "physical delivery to achieve higher levels of antigen production and formulation with microparticles"
+            ]
+        },
+        {
+            "id": "corona_query_8",
+            "question": "Aerosol transmission viable on surfaces",
+            "answers": [
+                "several studies have demonstrated that aerosol transmission is a likely method of transmission among adults",
+                "aerosol transmission route is also possible and opportunistic",
+                "also possible and opportunistic"
+            ]
+        },
+        {
+            "id": "corona_query_9",
+            "question": "Secondary infection",
+            "answers": [
+                "Secondary infection occured in 14.9%"
+            ]
+        },
+        {
+            "id": "corona_query_10",
+            "question": "can coronavirus live in hot temperatures",
+            "answers": [
+                ""
+            ]
+        },
+        {
+            "id": "corona_query_11",
+            "question": "how long will the outbreak be",
+            "answers": [
+                ""
+            ]
+        },
+        {
+            "id": "corona_query_12",
+            "question": "How long does the virus live outside",
+            "answers": [
+                ""
+            ]
+        },
+        {
+            "id": "corona_query_13",
+            "question": "can animals transfer covid",
+            "answers": [
+                ""
+            ]
+        },
+        {
+            "id": "corona_query_14",
+            "question": "how long will the quarantine last",
+            "answers": [
+                ""
+            ]
+        }
+    ]
+}

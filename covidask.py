@@ -35,6 +35,8 @@ from mips_phrase import MIPS
 from eval_utils import normalize_answer, f1_score, exact_match_score, drqa_exact_match_score, drqa_regex_match_score,\
                        drqa_metric_max_over_ground_truths, drqa_normalize
 
+
+import pdb
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(name)s -   %(message)s', datefmt='%m/%d/%Y %H:%M:%S',
                     level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -617,6 +619,8 @@ class covidAsk(object):
         step = args.eval_batch_size
         predictions = []
         evidences = []
+        contexts = []
+        start_time = time()
         for q_idx in tqdm(range(0, len(questions), step)):
             result = self.batch_query(
                 questions[q_idx:q_idx+step],
@@ -630,12 +634,18 @@ class covidAsk(object):
                 search_strategy=args.search_strategy,
             )
             prediction = [[ret['answer'] for ret in out] for out in result['ret']]
+            context = [[ret['context'] for ret in out] for out in result['ret']]
             evidence = [[ret['context'][ret['sent_start']:ret['sent_end']] for ret in out] for out in result['ret']]
+            
             predictions += prediction
             evidences += evidence
-        self.evaluate_results(predictions, qids, questions, answers, args, evidences=evidences)
+            contexts += context
+        scores = self.evaluate_results(predictions, qids, questions, answers, args, evidences=evidences, contexts=contexts)
+        elapsed_time = time() - start_time
+        scores['time'] = elapsed_time
+        return scores
 
-    def evaluate_results(self, predictions, qids, questions, answers, args, evidences=None):
+    def evaluate_results(self, predictions, qids, questions, answers, args, evidences=None, contexts=None):
         # Filter if there's candidate
         if args.candidate_path is not None:
             candidates = set()
@@ -704,7 +714,7 @@ class covidAsk(object):
 
             pred_out[qids[i]] = {
                     'question': questions[i],
-                    'answer': answers[i], 'prediction': predictions[i],
+                    'answer': answers[i], 'prediction': predictions[i], 'context': contexts[i] if contexts is not None else '',
                     'evidence': evidences[i] if evidences is not None else '',
                     'em_top1': bool(em_top1), f'em_top{args.top_k}': bool(em_topk),
                     'f1_top1': f1_top1, f'f1_top{args.top_k}': f1_topk
@@ -720,10 +730,15 @@ class covidAsk(object):
         # Dump predictions
         if not os.path.exists('pred'):
             os.makedirs('pred')
-        pred_path = os.path.join('pred', os.path.splitext(os.path.basename(args.test_path))[0] + '.pred')
+        pred_model = args.eval_model if 'eval_model' in args else ''
+        pred_path = os.path.join('pred', os.path.splitext(os.path.basename(args.test_path))[0] + '_' + pred_model + '.pred')
         logger.info(f'Saving prediction file to {pred_path}')
         with open(pred_path, 'w') as f:
             json.dump(pred_out, f)
+        
+        scores = {'exact_match_top1': exact_match_top1, 'f1_score_top1': f1_score_top1, 'exact_match_topk': exact_match_topk, 'f1_score_topk': f1_score_topk}
+        return scores
+        
 
     def save_top_k(self, args):
         # Load dataset and encode queries
@@ -762,7 +777,7 @@ class covidAsk(object):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     # QueryEncoder
-    parser.add_argument('--metadata_dir', default='models/bert', type=str)
+    parser.add_argument('--metadata_dir', default='/hdd1/miyoung/covidAsk/models/bert', type=str)
     parser.add_argument("--vocab_name", default='vocab.txt', type=str)
     parser.add_argument("--bert_config_name", default='bert_config.json', type=str)
     parser.add_argument("--bert_model_option", default='large_uncased', type=str)

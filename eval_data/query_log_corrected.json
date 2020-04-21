@@ -1,0 +1,128 @@
+{
+    "data": [
+        {
+            "id": "corona_query_0",
+            "question": "COVID-19 vaccines",
+            "answers": [
+                ""
+            ]
+        },
+        {
+            "id": "corona_query_1",
+            "question": "medical treatment for covid",
+            "answers": [
+                ""
+            ]
+        },
+        {
+            "id": "corona_query_2",
+            "question": "Symptoms covid 19",
+            "answers": [
+                ""
+            ]
+        },
+        {
+            "id": "corona_query_3",
+            "question": "coronavirus transmission surfaces",
+            "answers": [
+                ""
+            ]
+        },
+        {
+            "id": "corona_query_4",
+            "question": "covid-19 origin",
+            "answers": [
+                ""
+            ]
+        },
+        {
+            "id": "corona_query_5",
+            "question": "cytokine storms in COVID-19",
+            "answers": [
+                ""
+            ]
+        },
+        {
+            "id": "corona_query_6",
+            "question": "Similarity between sars and covid",
+            "answers": [
+                ""
+            ]
+        },
+        {
+            "id": "corona_query_7",
+            "question": "Effective ways of clinical trials",
+            "answers": [
+                ""
+            ]
+        },
+        {
+            "id": "corona_query_8",
+            "question": "Aerosol transmission viable on surfaces",
+            "answers": [
+                ""
+            ]
+        },
+        {
+            "id": "corona_query_9",
+            "question": "Secondary infection of coronavirus",
+            "answers": [
+                "Secondary infection occured in 14.9%"
+            ]
+        },
+        {
+            "id": "corona_query_10",
+            "question": "can coronavirus live in hot temperatures",
+            "answers": [
+                "survive well at temperatures below \u221220\u00b0C but not at temperatures above 4\u00b0C",
+                "below \u221220\u00b0C but not at temperatures above 4\u00b0C",
+                "many coronaviruses are sensitive to heat"
+            ]
+        },
+        {
+            "id": "corona_query_11",
+            "question": "how long will the outbreak be",
+            "answers": [
+                "The epidemic lasted for 2 months",
+                "2 months",
+                "outbreak is expected to peak within two weeks"
+            ]
+        },
+        {
+            "id": "corona_query_12",
+            "question": "How long does the virus live outside",
+            "answers": [
+                "up to 9 days",
+                "three days",
+                "up to three days",
+                "3 hours",
+                "9 days"
+            ]
+        },
+        {
+            "id": "corona_query_13",
+            "question": "can animals transfer coronavirus",
+            "answers": [
+                "infect humans emerge through cross-host transmission from animals",
+                "dromedary camels may potentially act as intermediate hosts by spreading the virus to humans",
+                "Many coronaviruses are capable of interspecies transmission"
+            ]
+        },
+        {
+            "id": "corona_query_14",
+            "question": "how long will the quarantine last",
+            "answers": [
+                "three weeks",
+                "duration of quarantine should be extended to three weeks",
+                "22-day quarantine period",
+                "14-day quarantine period may lead to a 6.7% failure for quarantine",
+                "The recommended 14-day quarantine period",
+                "14 days",
+                "2-week",
+                "3 weeks",
+                "14-day",
+                "2 weeks"
+            ]
+        }
+    ]
+}
